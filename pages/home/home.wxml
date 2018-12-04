@@ -1,0 +1,57 @@
+<!--pages/home/home.wxml-->
+<view>
+
+  <swiper indicator-dots="true" interval="5000" autoplay="true">
+
+    <swiper-item>
+      <image style='width:100%;height:500rpx' src="/images/iqiyi.png"></image>
+    </swiper-item>
+
+    <swiper-item>
+
+      <image style='width:100%;height:500rpx' src="/images/vr.png"></image>
+
+    </swiper-item>
+    <swiper-item>
+
+      <image style='width:100%;height:500rpx' src="/images/wx.png"></image>
+
+    </swiper-item>
+
+  </swiper>
+
+
+  <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index">
+
+    <view class='object_container'>
+      <view class='date_container'>
+
+        <image class='head_image' src='{{item.avatar}}'> </image>
+
+        <text class='date_text'>{{item.date}}</text>
+
+      </view>
+
+      <text class='title_text'>{{item.title}}</text>
+
+      <image class='content_image' src='{{item.imgSrc}}'></image>
+
+      <text class='content_text'>{{item.content}}</text>
+
+      <view class='nice_container'>
+        <image class='collection_image' src='/images/icon/chat.png'></image>
+
+        <text class='collection_text'>{{item.collection}}</text>
+
+        <image class='see_image' src="/images/icon/view.png"></image>
+
+        <text class='see_text'>{{item.reading}}</text>
+
+      </view>
+
+    </view>
+
+  </block>
+
+
+</view>
